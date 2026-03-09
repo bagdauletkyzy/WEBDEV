@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Switcher</title>
+</head>
+<body>
+<header>
+  <h1>Color Switcher</h1>
+</header>
+<main>
+  <p>Current color: <span id="color-code">#FFFFFF</span></p>
+  <div class="color-buttons">
+  <button class="color=btn" data-color="#E74C3C">
+
+  </button>
+    <button class="color-btn" data-color="#2ECC71">
+
+    </button>
+    <button class="color-btn" data-color="#3498DB">
+
+    </button>
+    <button class="color-btn" data-color="#9B59B6">
+
+    </button>
+    <button class="color-btn" data-color="#E67E22">
+
+    </button>
+    <button id="random-btn"> random color</button>
+    <button id="reset-btn"> Reset</button>
+  </div>
+</main>
+<script>
+  const colorButtons=document.querySelectorAll('.color-btn')
+  colorButtons.forEach(button=>{})
+  const randomBtn=document.querySelectorAll('.random-btn')
+  randomBtn.forEach(button=>{})
+  const resetBtn=document.querySelectorAll('.reset-btn')
+  resetBtn.forEach(button=>{})
+  function changeBackground(color){
+    body.style.background(color);
+
+    document.body.style.backgroundColor = color
+
+  }
+  function generateRandomColor(){
+    generateRandomColor();
+
+
+    const randomColor='#'+Math.floor(Math.random()*16777215).toString(16).padStart(6,'0')
+
+  }
+
+
+
+
+</script>
+
+</body>
+</html>

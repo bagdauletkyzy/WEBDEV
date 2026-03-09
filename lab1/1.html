@@ -1,0 +1,36 @@
+<div >
+
+  <div >
+    <a routerLink="/todos"
+       [queryParams]="{ status: null }"
+       routerLinkActive="active"
+       [routerLinkActiveOptions]="{ exact: true }">
+      All
+    </a>
+    <a routerLink="/todos"
+       [queryParams]="{ status: 'completed' }"
+       routerLinkActive="active">
+      Completed
+    </a>
+    <a routerLink="/todos"
+       [queryParams]="{ status: 'pending' }"
+       routerLinkActive="active">
+      Pending
+    </a>
+  </div>
+
+  
+  <p >
+    Showing <strong>{{ filteredTodos.length }}</strong> of 30 todos
+  </p>
+
+  
+  <ul >
+    <li *ngFor="let todo of filteredTodos" [class.completed]="todo.completed">
+      <span class="status">{{ todo.completed ? '✓' : '○' }}</span>
+      <span class="title">{{ todo.title }}</span>
+    </li>
+  </ul>
+
+  <p *ngIf="filteredTodos.length === 0" class="empty">No todos found</p>
+</div>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Linkedin</title>
+    <style>
+        .nav{
+            display:flex;
+            padding:12px 24px;
+            border-bottom: 1 pxsolidvar(--border-color) solid;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+
+        }
+        .logo-box{
+            background-color:blue;
+            color:white;
+            border-radius: 4px;
+
+        }
+        .hero.text{
+            display: flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items: center;
+            top:10px;
+            width: 100%;
+
+        }
+
+        .hero-form{
+            background-color: #F3F2EF;
+            font-size: 1.2rem;
+
+
+
+        }
+        #login-form{
+            background-color: white;
+            padding:24px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+        }
+        label{
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+        .phon{
+            width: 100px;
+
+        }
+        .container{
+            display: flex;
+            margin-bottom: 20px;
+            width: 100%;
+            height: 100%;
+            justify-content: left;
+            border-color: darkgray;
+            border-radius: 10px;
+            padding:20px;
+            align-items: left;
+            background-color: white;
+
+
+        }
+        h1{
+            margin-right: 20px;
+            text-align: right;
+
+        }
+        a{
+            border-color: blue;
+
+        }
+        .button-outline{
+            border-color: blue;
+            background-color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+<header>
+    <nav class="nav">
+        <img class="phon " src="https://i.pinimg.com/736x/c0/44/d1/c044d19025e6939e49af34610e2694d7.jpg">
+
+
+            <input type="search" placeholder="Search jobs,people,companies">
+            <ul>
+                <li>Jobs</li>
+                <li>People</li>
+                <li>Companies</li>
+            </ul>
+            <a href="#" class="join">Join now</a>
+            <a href="#" class="join" >Sign in</a>
+
+
+    </nav>
+</header>
+<section class="container" id="hero">
+    <div class="hero-text">
+        <h1>
+            Welcome to your professional <span class="highlight">community</span>
+
+        </h1>
+
+    </div>
+    <div class="hero-form">
+    <form>
+        <label for="email">
+            Email or Phone
+            <input type="text" name="email" placeholder="Enter your email">
+        </label><br>
+        <label for="password">
+            Password
+            <input type="password" name="password" placeholder="Enter your password">
+        </label><br>
+        <a href="#" class="forgot">Forgot password?</a><br>
+        <button type="submit" class="btn-primary">Sign in</button>
+
+        <div class="divider">
+            <span>or</span></div>
+
+        <button type="button" class="btn-outline">Join now</button>
+        <button type="button" class="btn-social">[g]Continue with Google</button>
+
+    </form>
+</div>
+
+
+</section>
+<section>
+
+
+
+</section>
+
+
+
+</body>
+</html>

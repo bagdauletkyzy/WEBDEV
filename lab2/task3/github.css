@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #24292f;
+}
+
+.hero {
+  max-width: 800px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.primary {
+  background: #24292f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.primary:hover {
+  background: #0969da;
+}
+
+.pricing {
+  max-width: 1000px;
+  margin: 40px auto;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 24px;
+  background: #fafafa;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.desc {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.card h2 span {
+  font-size: 12px;
+  color: #777;
+}
+
+.card button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.card button:hover {
+  background: #353637;
+  color: #fff;
+}
+
+
+
+.dark:hover {
+  background: #444;
+}
+
+.card ul {
+  list-style: none;
+}
+
+.card ul li {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.highlight {
+  border: 2px solid #2467a9;
+}
+
+.badge {
+  background: #0404ff;
+  color: #fff;
+  padding: 3px 8px;
+  font-size: 12px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.addons {
+  max-width: 1000px;
+  margin: 60px auto;
+}
+
+.addons h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.addon {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  background: #fafafa;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.addon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.addon h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.addon p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.addon a {
+  color: #0969da;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.addon a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .pricing {
+    flex-direction: column;
+  }
+
+  .addons-grid {
+    grid-template-columns: 1fr;
+  }
+}

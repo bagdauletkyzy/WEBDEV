@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do list</title>
+
+</head>
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header { 
+        text-align: center; 
+        margin-bottom: 20px; 
+        background-color: black; 
+        color: white; 
+        padding: 10px; } 
+    main { 
+        max-width: 80%; 
+        margin: 0 auto; 
+        background-color: #fff; 
+        padding: 20px; 
+        border-radius: 8px; 
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    }
+    form{
+        display: flex;
+        gap: 10px;
+    }
+    input[type="text"]{
+        flex-grow: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    button{
+        padding: 10px 20px;
+        border: none;
+        background-color: #424242;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: #464646;
+    }
+    ul{
+        list-style-type: none;
+        padding-left: 0;
+    }
+    li{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+    .delete-button{
+        background-color: transparent;
+        border: none;
+        color: red;
+        cursor: pointer;
+    }
+</style>
+
+
+<body>
+    <header>
+        <h1>To Do List</h1>
+    </header>
+    <main>
+        <form>
+            <h1>To Do List</h1>
+            
+            <input type="text" id="taskInput" placeholder="New task">
+            <button onclick="addTask()">Add Task</button>
+            
+
+        </form>
+        <ul id="taskList"></ul>
+
+    
+
+    <script>
+        const form=document.querySelector('form');
+        const taskInput=document.getElementById('taskInput');
+        const taskList=document.getElementById('taskList'); 
+
+
+        const createTaskElement=(task)=>{
+            const li=document.createElement('li');
+            const span=document.createElement('span');
+            span.textContent=task;
+
+            
+            const radio=document.createElement('input');
+            radio.type='radio';
+            radio.name='task';
+
+    
+
+            const deleteButton=document.createElement('button');
+            deleteButton.textContent='🗑️';
+            deleteButton.className='delete-button';
+
+            radio.addEventListener('change',()=>{
+                if(radio.checked){
+                    li.style.textDecoration='line-through';
+                }else{
+                    li.style.textDecoration='none';
+                }
+            });
+            deleteButton.addEventListener('click',()=>{
+                taskList.removeChild(li);
+            });
+            li.appendChild(radio);
+            li.appendChild(span);
+            li.appendChild(deleteButton);
+
+            return li;
+    };
+    form.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        const task=taskInput.value.trim();
+        if(task){
+            const taskElement=createTaskElement(task);
+            taskList.appendChild(taskElement);
+            taskInput.value='';
+        }
+    });
+
+    </script>
+   
+
+        
+    </main>
+    
+</body>
+</html>

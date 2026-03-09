@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 120px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  width: 55%;
+}
+
+.logo {
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.left h2 {
+  font-size: 28px;
+  font-weight: normal;
+  color: #1c1e21;
+}
+
+.right {
+  width: 40%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.right form {
+  display: flex;
+  flex-direction: column;
+}
+
+.right input {
+  padding: 14px;
+  margin-bottom: 12px;
+  font-size: 17px;
+  border-radius: 6px;
+  border: 1px solid #dddfe2;
+}
+
+.right input:focus {
+  outline: none;
+  border-color: #1877f2;
+}
+
+.login-btn {
+  background-color: #1877f2;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #166fe5;
+}
+
+.forgot-link {
+  display: block;
+  margin: 15px 0;
+  color: #1877f2;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.green-button {
+  background-color: #42b72a;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.green-button:hover {
+  background-color: #36a420;
+}
+
+.page-link {
+  font-size: 14px;
+  color: #1c1e21;
+}
+
+.page-link a {
+  font-weight: bold;
+  color: #1c1e21;
+  text-decoration: none;
+}
+
+.page-link a:hover {
+  text-decoration: underline;
+}
